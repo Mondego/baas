@@ -1,0 +1,22 @@
+*.json
+*.log
+save_*
+builds/*
+TBUILD/*
+Uncompress*
+jars/*
+*.pyc
+jbf/PROJECTS/*
+jbf/COMPLIED/*
+jbf/TEMP/*
+jbf/ARCHIVE/*
+.vs/*
+*.sln
+*.pyproj
+badjars*
+.idea
+venv
+# System Files
+.DS_Store
+Thumbs.db
+
