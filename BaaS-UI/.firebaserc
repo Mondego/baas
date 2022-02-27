@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sourcererjbf": {
+      "hosting": {
+        "BaaS-UI": [
+          "sourcererjbf"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sourcererjbf"
+  }
+}

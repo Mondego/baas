@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+//html, body {
+//  height: 100%;
+//}
+//
+//body {
+//  margin: 0;
+//
+//}
+
+/* global styling for sticky footer*/
+html, body, app-root {
+  height: 100%;
+}
+
+body {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

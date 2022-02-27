@@ -1,0 +1,24 @@
+<mat-nav-list>
+  <ng-container>
+    <a mat-list-item [routerLink]="['/baas']" routerLinkActive="router-link-active">
+      <mat-icon mat-list-icon>build</mat-icon>
+      <p mat-line> BaaS </p>
+    </a>
+    <mat-divider></mat-divider>
+    <a mat-list-item [routerLink]="['/recent-build']" routerLinkActive="router-link-active">
+      <mat-icon mat-list-icon>access_time</mat-icon>
+      <p mat-line> Recent Build</p>
+    </a>
+    <mat-divider></mat-divider>
+    <a mat-list-item [routerLink]="['/jbf']" routerLinkActive="router-link-active">
+      <mat-icon mat-list-icon>settings</mat-icon>
+      <p mat-line> JBF </p>
+    </a>
+    <mat-divider></mat-divider>
+    <a mat-list-item [routerLink]="['/jgigantic']" routerLinkActive="router-link-active">
+      <mat-icon mat-list-icon>archive</mat-icon>
+      <p mat-line> JGigantic </p>
+    </a>
+    <mat-divider></mat-divider>
+  </ng-container>
+</mat-nav-list>

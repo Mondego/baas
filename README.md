@@ -1,2 +1,2 @@
-# baas
-Build as a Service (BaaS): Build Arbitrary Java Projects
+# BaaS (Build as a Service)
+Build Arbitrary Java Projects

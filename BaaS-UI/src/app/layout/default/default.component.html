@@ -1,0 +1,28 @@
+<div class="content-outer-container">
+  <div class="content-inner-container">
+    <div class="centered">
+      <div class="navbar-container">
+        <app-header (toggleSidenav)="sidenav.toggle()"></app-header>
+        <mat-sidenav-container>
+          <mat-sidenav #commandbarSidenav mode="over">
+            <app-side-nav></app-side-nav>
+          </mat-sidenav>
+          <mat-sidenav-content>
+            <router-outlet></router-outlet>
+          </mat-sidenav-content>
+        </mat-sidenav-container>
+
+        <div class="footer-container">
+          <div class="footer-content">
+            <app-footer></app-footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
