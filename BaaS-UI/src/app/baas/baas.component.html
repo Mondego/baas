@@ -1,0 +1,53 @@
+<mat-grid-list cols="1" rowHeight="100%">
+  <mat-grid-tile>
+    <mat-card class="example-card">
+<!--      <mat-card-title><h1>Build as a Service (BaaS)</h1></mat-card-title>-->
+      <div class="form-container">
+        <form class="form" [formGroup]="repoSearchForm">
+          <img mat-card-image src="../../assets/logos/baas-logo.png" alt="BaaS" class="full-width center">
+<!--          <img mat-card-image src="../../assets/logos/landing.png" alt="BaaS" class="full-width">-->
+          <mat-form-field class="full-width" appearance="outline">
+            <button matSuffix mat-button><mat-icon >search</mat-icon></button>
+            <input matInput placeholder="Past GitHub Repository URL" formControlName="gitURLForm"
+                   [(ngModel)]="githubPastedOrTypedURL" (paste)="onPaste($event)" required>
+
+            <mat-error *ngIf="repoSearchForm.controls['gitURLForm'].hasError('required')">
+              Please Provide A Valid GitHub URL
+            </mat-error>
+          </mat-form-field>
+          <!--    (change)="onGitURLChanges($event)"-->
+          <!--    (paste)="onPaste($event)"-->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-select placeholder="Select A Branch" formControlName="branchForm"
+                        (selectionChange)='onBranchSelected($event)' required>
+              <mat-option *ngFor="let b of branches" [value]="b.name">
+                {{b.name}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="repoSearchForm.controls['branchForm'].hasError('required')">
+              <strong>Please Select A Branch</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <span mat-line></span>
+          <ngx-spinner
+            bdColor="rgba(51,51,51,0.8)"
+            size="medium"
+            color="#fff"
+            type="ball-scale-multiple"
+          >
+            <p style="font-size: 20px; color: white">{{loadingMessage}}</p>
+          </ngx-spinner>
+          <mat-card-actions>
+            <button mat-raised-button color="success" [disabled]="!repoSearchForm.valid" (click)="build()">Build
+            </button>
+            <button mat-raised-button color="success" (click)="clearForm()">Clear</button>
+          </mat-card-actions>
+        </form>
+      </div>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+

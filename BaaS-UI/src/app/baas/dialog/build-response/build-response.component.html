@@ -1,0 +1,56 @@
+<div class="container">
+  <h1 mat-dialog-title class="success" *ngIf="data.success">Build Success</h1>
+  <h1 mat-dialog-title class="failed" *ngIf="!data.success">Build Falied</h1>
+  <div mat-dialog-content>
+    <p></p>
+    <mat-tab-group>
+
+      <mat-tab label="Project Details">
+        <p></p>
+        GitHub User: <a href="https://github.com/{{data.owner}}" target="_blank"><b>{{data.owner}}</b></a>
+        <p></p>
+        GitHub Repository: <a href="https://github.com/{{data.owner}}/{{data.repository}}"
+                              target="_blank"><b>{{data.repository}}</b></a>
+        <p></p>
+        Repository Branch: <a href="https://github.com/{{data.owner}}/{{data.repository}}/tree/{{data.branch}}"
+                              target="_blank"><b>{{data.branch}}</b></a>
+        <p></p>
+        Source Version: <a href="https://github.com/{{data.owner}}/{{data.repository}}/commit/{{data.commit_sha}}"
+                           target="_blank"><b>{{data.commit_sha}}</b></a>
+        <p></p>
+        Source Code: <a href="{{data.source_url}}" target="_blank"><b>Download</b></a>
+      </mat-tab>
+
+      <mat-tab label="Project and Build Statistics">
+        <p></p>
+        Java Source Files: <b>{{data.java_files}}</b>
+        <p></p>
+        Contained JAR Files: <b>{{data.jars}}</b>
+        <p></p>
+        Compiled Class Files: <b>{{data.class_files}}</b>
+        <p></p>
+        Existing Build Type: <b>{{data.build_type}}</b>
+        <p></p>
+        Has Own Build: <b>{{data.has_own_build}}</b>
+      </mat-tab>
+
+      <mat-tab label="Build Status">
+        <p></p>
+        Build Status: <b>{{data.success}}</b>
+        <p></p>
+        Compilation Time: <b>{{data.total_compilation_time}}</b>
+        <p></p>
+        Processing Time: <b>{{data.total_processing_time}}</b>
+        <p></p>
+        Compiled Directory Path: <b>{{data.compiled_dir_path}}</b>
+        <p></p>
+        Compiled Code: <a href="{{data.compiled_url}}" target="_blank"><b>Download</b></a>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="1" (click)="downloadBuild()">Download Build</button>
+    <button mat-button (click)="goToRecentBuild()" tabindex="-1">View All Recent Build</button>
+  </div>
+</div>

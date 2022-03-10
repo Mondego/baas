@@ -1,0 +1,20 @@
+{
+
+  "owner": "0-8-4",
+  "repository": "MyJavaProject",
+  "branch": "master",
+  "commit_sha": "592fea02342b08600c42ec31346c9faf6b1f225b",
+  "source_url": "https://0-8-4MyJavaProject/archive/592fea02342b08600c42ec31346c9faf6b1f225b.zip",
+
+  "jars": 0,
+  "java_files": 2,
+  "class_files": 2,
+  "build_type": "none",
+
+  "compiled_dir_path": "dir_0/0-8-4##MyJavaProject",
+  "compiled_url": "592fea02342b08600c42ec31346c9faf6b1f225b.zip",
+  "has_own_build": false,
+  "success": false,
+  "total_compilation_time": 1.3799989223480225,
+  "total_processing_time": 1.4276928901672363
+}
