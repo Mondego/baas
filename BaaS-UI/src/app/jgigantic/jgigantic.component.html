@@ -1,0 +1,73 @@
+<mat-card class="example-card">
+  <img mat-card-image src="../../assets/logos/jgigantic-logo-fin.png" alt="BaaS" class="full-width img-center">
+  <div fxLayout fxLayoutAlign="center center">
+    <mat-form-field fxFlex="60%" appearance="outline">
+      <button matSuffix mat-button>
+        <mat-icon>search</mat-icon>
+      </button>
+      <input matInput type="text" (keyup)="doFilter($event.target)" placeholder="Search Compiled Java Projects">
+    </mat-form-field>
+  </div>
+</mat-card>
+
+<span mat-line></span>
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white">{{loadingMessage}}</p>
+</ngx-spinner>
+<mat-paginator [pageSize]="5"
+               [pageSizeOptions]="[5, 25, 75, 100]"
+               showFirstLastButtons>
+</mat-paginator>
+<table mat-table [dataSource]="dataSource" matSort matSortStart="desc" (matSortChange)="customSort($event)">
+  <ng-container matColumnDef="git_repository_link">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Repository</th>
+    <td mat-cell *matCellDef="let element">
+      <span [innerHTML]="[element.git_repository_link]"> </span>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="stars">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Stars</th>
+    <td mat-cell *matCellDef="let element"> {{element.stars}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="java_files">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Java Files</th>
+    <td mat-cell *matCellDef="let element"> {{element.java_files}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="jars">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Contained Jars</th>
+    <td mat-cell *matCellDef="let element"> {{element.jars}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="build_type">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Existing Build Types</th>
+    <td mat-cell *matCellDef="let element"> {{element.build_type}} </td>
+  </ng-container>
+  <ng-container matColumnDef="class_files">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Compiled Files</th>
+    <td mat-cell *matCellDef="let element"> {{element.class_files}} </td>
+  </ng-container>
+  <ng-container matColumnDef="repository_zip_link">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Built Commit Version</th>
+    <td mat-cell *matCellDef="let element">
+      <span [innerHTML]="[element.repository_zip_link]"> </span>
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="bytecode_zip_link">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Compiled Code</th>
+    <td mat-cell *matCellDef="let element">
+      <span [innerHTML]="[element.bytecode_zip_link]"> </span>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+

@@ -1,0 +1,70 @@
+mat-card {
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height: 20%;
+}
+
+h1 {
+  text-align: center !important;
+}
+
+th.mat-header-cell {
+  text-align: center !important;
+}
+
+
+.mat-row .mat-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: auto;
+}
+
+.mat-row:hover .mat-cell {
+  border-color: currentColor;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}
+
+// from dashboard
+
+
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+/* Toolbar */
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-paginator {
+  width: 100%;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+/* 1st solution - causes weird thing at the left side of input */
+::ng-deep .mat-form-field-outline-start {
+  border-radius: 28px 0 0 28px !important;
+  min-width: 28px !important;
+}
+
+::ng-deep .mat-form-field-outline-end {
+  border-radius: 0 28px 28px 0 !important;
+}
