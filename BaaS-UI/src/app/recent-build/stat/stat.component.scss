@@ -1,0 +1,50 @@
+:host ::ng-deep .mat-card-header-text {
+  width: 100%;
+  text-align: right;
+}
+
+.icon-lg {
+  font-size: 50px;
+}
+
+.mat-card {
+  color: red;
+  .mat-card-header {
+    width: 100%;
+  }
+  .mat-card-title {
+    font-size: 20px !important;
+    text-align: right;
+  }
+  .mat-card-subtitle {
+    color: black;
+    //white-space: nowrap;
+    margin-top: 20px;
+    font-size: 40px !important;
+    text-align: right;
+  }
+  .mat-card-actions {
+  }
+
+  &.total-build {
+    //background: linear-gradient(60deg, rgba(229, 7, 34, 0.4), rgba(236, 25, 25, 0.45));
+    color: black;
+    text-emphasis: black;
+  }
+
+  &.success {
+    //background: linear-gradient(60deg, #ffa726, #fb8c00);
+    color: green;
+  }
+
+  &.failed {
+    //background: linear-gradient(60deg, #66bb6a, #43a047);
+    //
+    color: red;
+  }
+
+  &.average-time {
+    //background: linear-gradient(60deg, #26c6da, #00acc1);
+    color: darkblue;
+  }
+}
