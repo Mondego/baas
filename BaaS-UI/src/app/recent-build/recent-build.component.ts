@@ -22,7 +22,7 @@ export class RecentBuildComponent implements OnInit {
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  public displayedColumns = ['Repository', 'java_files', 'jars', 'build_type', 'class_files', "Build_Status", "actions"];
+  public displayedColumns = ['Repository', 'java_files', 'jars', 'build_type', 'class_files','build_version', 'build_time_stamp', "Build_Status", "actions"];
   public dataSource = new MatTableDataSource<BuildResponse>();
 
   public cover = 'cover';
@@ -74,6 +74,9 @@ export class RecentBuildComponent implements OnInit {
 
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
+  }
+  public doFilter = (target: any) => {
+    this.dataSource.filter = target.value.trim().toLocaleLowerCase();
   }
 
   public showBuildResponse(response: BuildResponse) {

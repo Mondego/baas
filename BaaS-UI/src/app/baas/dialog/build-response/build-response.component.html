@@ -15,7 +15,7 @@
         Repository Branch: <a href="https://github.com/{{data.owner}}/{{data.repository}}/tree/{{data.branch}}"
                               target="_blank"><b>{{data.branch}}</b></a>
         <p></p>
-        Source Version: <a href="https://github.com/{{data.owner}}/{{data.repository}}/commit/{{data.commit_sha}}"
+        Source Version: <a href="https://github.com/{{data.owner}}/{{data.repository}}/tree/{{data.commit_sha}}"
                            target="_blank"><b>{{data.commit_sha}}</b></a>
         <p></p>
         Source Code: <a href="{{data.source_url}}" target="_blank"><b>Download</b></a>
@@ -44,13 +44,13 @@
         <p></p>
         Compiled Directory Path: <b>{{data.compiled_dir_path}}</b>
         <p></p>
-        Compiled Code: <a href="{{data.compiled_url}}" target="_blank"><b>Download</b></a>
+        Compiled Code: <a href="{{this.archiveBasePath}}/{{data.compiled_url}}" target="_blank"><b>Download</b></a>
       </mat-tab>
     </mat-tab-group>
   </div>
 
   <div mat-dialog-actions>
-    <button mat-button [mat-dialog-close]="1" (click)="downloadBuild()">Download Build</button>
+    <button mat-button [mat-dialog-close]="1" (click)="downloadBuild(data.compiled_url)">Download Build</button>
     <button mat-button (click)="goToRecentBuild()" tabindex="-1">View All Recent Build</button>
   </div>
 </div>

@@ -43,8 +43,8 @@ def get_project_url():
     project_json_path = "./COMPILED/project_details.json"
     build_result = load_json(project_json_path)
     print(build_result)
+    build_time_stamp = datetime.datetime.now()
     #
-    # current_time_stamp = datetime.datetime.now()
     # id=str(uuid.uuid4())
     compiled_repo_zip_file_name = commit_sha + ".zip"
     archive_compiled_project(compiled_repo_zip_file_name)
@@ -55,10 +55,10 @@ def get_project_url():
     clean_up_downloaded_project_dir(repo_saved_file_path)
 
     # return jsonify("Done")
-    return prepare_response(owner, repo, branch, commit_sha, repo_state_result, build_result)
+    return prepare_response(owner, repo, branch, commit_sha, repo_state_result, build_result, build_time_stamp)
 
 
-def prepare_response(owner, repo, branch, commit_sha, repo_state_result, build_result):
+def prepare_response(owner, repo, branch, commit_sha, repo_state_result, build_result, build_time_stamp):
     response = {}
     response["owner"] = owner
     response["repository"] = repo
@@ -77,6 +77,7 @@ def prepare_response(owner, repo, branch, commit_sha, repo_state_result, build_r
     response["compiled_dir_path"] = build_result[key]["file"]
     response["total_compilation_time"] = compute_compilation_time(build_result[key])
     response["total_processing_time"] = compute_processing_time(build_result[key])
+    response["build_time_stamp"] = build_time_stamp
     return response
 
 

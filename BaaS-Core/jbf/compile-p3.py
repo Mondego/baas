@@ -34,7 +34,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     config = configparser.ConfigParser()
-    config.read('/Users/mrhmisu/Repositories/JBF/BaaS/jbf/jbf.config.txt')
+    config.read('/Users/mrhmisu/Repositories/baas/BaaS-Core/jbf/jbf.config.txt')
     args.root = config.get('DEFAULT', 'root')
     args.rebuild_from_scratch = config.getboolean('DEFAULT', 'rebuild_from_scratch')
     args.file = config.get('DEFAULT', 'file')

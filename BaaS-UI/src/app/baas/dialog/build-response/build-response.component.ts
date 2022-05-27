@@ -3,6 +3,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {BuildResponse} from "../../build.response.model";
 import {Router} from "@angular/router";
+import {environment} from "../../../../environments/environment";
 
 @Component({
   selector: 'app-build-response',
@@ -10,6 +11,9 @@ import {Router} from "@angular/router";
   styleUrls: ['./build-response.component.scss']
 })
 export class BuildResponseComponent implements OnInit {
+
+
+  archiveBasePath = environment.backendBaseUrl + "compiled";
 
   constructor(public dialogRef: MatDialogRef<BuildResponseComponent>,
               @Inject(MAT_DIALOG_DATA) public data: BuildResponse,
@@ -37,8 +41,8 @@ export class BuildResponseComponent implements OnInit {
     });
   }
 
-  public downloadBuild(): void {
-    let test_link = "https://mondego.ics.uci.edu/projects/jbf/ase-22-java-build/dir_226/skylabspune%23%23EyeMouseControll.zip";
+  public downloadBuild(compiled_url: string): void {
+    let test_link = this.archiveBasePath + "/" + compiled_url
     window.open(test_link);
     this.popUpSnackBar("Build Downloading...")
     this.dialogRef.close();

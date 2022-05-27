@@ -1,9 +1,9 @@
 [DEFAULT]
-root = /Users/mrhmisu/Repositories/JBF/BaaS/jbf/PROJECTS
+root = /Users/mrhmisu/Repositories/baas/BaaS-Core/jbf/PROJECTS
 rebuild_from_scratch = True
 file = AUTOGEN
-outfolder = /Users/mrhmisu/Repositories/JBF/BaaS/jbf/COMPILED
-output =/Users/mrhmisu/Repositories/JBF/BaaS/jbf/COMPILED/project_details.json
+outfolder = /Users/mrhmisu/Repositories/baas/BaaS-Core/jbf/COMPILED
+output =/Users/mrhmisu/Repositories/baas/BaaS-Core/jbf/COMPILED/project_details.json
 jars =/Users/mrhmisu/previous-pc/ubuntu/jars
 fqn_to_jar = /Users/mrhmisu/previous-pc/ubuntu/builds/fqn-to-jars.shelve
 threads = 1

@@ -35,6 +35,10 @@
 
 table {
   width: 100%;
+
+}
+mat-table{
+  text-align: center;
 }
 
 th.mat-sort-header-sorted {
@@ -73,3 +77,16 @@ th.mat-header-cell {
   text-align: center !important;
 }
 
+/* 1st solution - causes weird thing at the left side of input */
+::ng-deep .mat-form-field-outline-start {
+  border-radius: 28px 0 0 28px !important;
+  min-width: 28px !important;
+}
+
+::ng-deep .mat-form-field-outline-end {
+  border-radius: 0 28px 28px 0 !important;
+}
+
+mat-form-field {
+  width: 100%;
+}

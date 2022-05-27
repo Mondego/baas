@@ -15,4 +15,5 @@ export class BuildResponse {
   success: boolean;
   total_compilation_time: number;
   total_processing_time: number;
+  build_time_stamp: string;
 }

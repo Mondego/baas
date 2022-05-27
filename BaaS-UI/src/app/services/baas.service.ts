@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {BuildResponse} from "../baas/build.response.model";
 import {
   Firestore, addDoc, collection, collectionData,
-  doc, docData, deleteDoc, updateDoc, DocumentReference, setDoc
+  doc, docData, deleteDoc, updateDoc, DocumentReference, setDoc, query, where, getDocs
 } from '@angular/fire/firestore';
 import {Observable} from "rxjs";
 
@@ -22,6 +22,17 @@ export class BaasService {
   public getProjects(): Observable<BuildResponse[]> {
     const projectsRef = collection(this.firestore, 'daaSProjects');
     return collectionData(projectsRef, {idField: 'id'}) as Observable<BuildResponse[]>;
+  }
+
+  public getProjectsByCommitSha(commitSha: string) {
+    const projectRef = collection(this.firestore, 'daaSProjects');
+    const q = query(projectRef, where("commit_sha", "==", commitSha), where("success", "==", true));
+    const querySnapshot = getDocs(q);
+    // querySnapshot.forEach((doc) => {
+    //   // doc.data() is never undefined for query doc snapshots
+    //   console.log(doc.id, " => ", doc.data());
+    // });
+
   }
 
   public getProjectByID(id: string) {
