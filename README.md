@@ -73,11 +73,11 @@ ng serve
 ### Note
 Currently, ***we are hosting BaaS on request***. We have a large collection of Jars and the pre-constructed FQN index.
 We successfully compiled [91,076 Java projects](https://jbf-with-jgigantic.web.app/jgigantic.html) with our Jar collection. 
-If you need to try BaaS in your work, please contact us to this email [mdrh@uic.edu](mdrh@uci.edu).
+If you need to try BaaS in your work, please contact us to this email [mdrh@uci.edu](mailto:mdrh@uci.edu).
 We will host BaaS for you and allow you to utilize it for instantly build GitHub Java projects.
 
 ### Contact
-If you have any questions or find any issues, please contact at [mdrh@uci.edu](mdrh@uci.edu)
+If you have any questions or find any issues, please contact at [mdrh@uci.edu](mailto:mdrh@uci.edu)
 
 ## License
 This repository is licensed under [GNU General Public License v3.0](LICENSE)
