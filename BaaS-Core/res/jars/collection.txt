@@ -1,1 +1,1 @@
-JBF need such folder to have all collection of JARs.
+JBF needs such folder to have all collection of JARs.
