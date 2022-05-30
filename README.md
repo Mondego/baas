@@ -42,7 +42,7 @@ BaaS-Core fully relied on JBF generated FQN index and Jar collection and these t
 Therefore, you need a ***pre-constructed FQN index*** that maps a Jar collection on the host machine. Now to run the service, execute the following commands and the BaaS-Core will be available on [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
 ```bash
-cd BaaS-C
+cd BaaS-Core
 python3 jbf.web.py
 ```
 
