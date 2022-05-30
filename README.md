@@ -15,11 +15,10 @@ a downloadable link of that package to the BaaS-UI as a response to the build re
 The service is implemented in Python [Flask](https://pypi.org/project/Flask/)  application that triggers JBF execution on user given build request.
 
 ## BaaS-UI
-BaaS-UI is a front-end web application that provides a web interface to the
+BaaS-UI is a front-end [Angular](https://angular.io)  web application that provides a web interface to the
 users. It allows the users to give a Java repository GitHub URL and branch as
 input and displays the build-project overview, statistics, build status, and the downloadable
 package link. Users download the build package with this link. BaaS-UI also provides a dashboard showing the current status of the service and the available compiled projects.
-It is implemented in [Angular](https://angular.io)
 
 
 ### BaaS Works in Action
