@@ -1,3 +1,5 @@
+*-local.py
+*-local.config
 *.json
 *.log
 save_*

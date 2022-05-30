@@ -22,7 +22,7 @@ def load_fqns(folderpath, filename, threads):
 
 def get_fqn_jar_map():
     config = configparser.ConfigParser()
-    config.read('jbf.config.txt')
+    config.read('jbf.config')
     fqn_to_jar_map_file = config.get('DEFAULT', 'fqn_to_jar')
     return shelve.open(fqn_to_jar_map_file, 'r')
     # thread = config.getint('DEFAULT', 'threads')

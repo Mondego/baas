@@ -1,16 +1,20 @@
 import json
 import os
-import uuid
 import zipfile
 import datetime
 from subprocess import run, CalledProcessError, PIPE
 import requests
-from flask import Flask, request, jsonify, render_template, send_from_directory
+from flask import Flask, request, send_from_directory
 import repo_statistics as repo_state
 from flask_cors import CORS
 
 app = Flask(__name__, template_folder='templates')
 CORS(app)
+
+
+@app.route('/')
+def get():
+    return "Welcome of BaaS"
 
 
 @app.route('/compiled/<string:filename>')
@@ -121,18 +125,10 @@ def download_and_save_a_repository(download_url, saved_file_path):
         print("Already Downloaded")
 
 
-# def prepared_downloaded_repo_name(git_url):
-#     base = "https://github.com/"
-#     owner_repo = git_url.split(base)[1]
-#     owner = owner_repo.split("/")[0]
-#     repo = owner_repo.split("/")[1]
-#     return owner + "##" + repo
-
-
 def execute_jbf():
     print("Executing JBF...")
     try:
-        output = run(["../venv/bin/python3", "compile-p3.py"], encoding='utf8', check=True,
+        output = run(["python3", "jbf-config-compile.py"], encoding='utf8', check=True,
                      stdout=PIPE).stdout.strip()
         print(output)
         print("JBF Execution Done.")
@@ -220,7 +216,4 @@ def make_tree(path):
 
 
 if __name__ == '__main__':
-    app.run()
-    # app.run(host='0.0.0.0', port=5000)
-    # http://127.0.0.1:5000/project?url=https://github.com/0-8-4/MyJavaProject&commit_sha=5f6a3d1d9ec187a09ed27e9e71e266d287db3ec4
-    # http://127.0.0.1:5000/project?url=https://github.com/tejasbhangale/OnlineBankingSystem&commit_sha=70a4df9ec73fa2ad072f03ced57cb5dcb4cf1241
+    app.run(host='0.0.0.0', port=5000)

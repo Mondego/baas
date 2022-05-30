@@ -1,0 +1,1 @@
+JBF need such an FQN index such as fqn-to-jars.shelve that contains all the FQN to JAR paths mapping.
