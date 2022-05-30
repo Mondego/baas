@@ -1,0 +1,1 @@
+This directory will temporarily keep the downloaded Java projects archive.

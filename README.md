@@ -35,7 +35,7 @@ It is implemented in [Angular](https://angular.io)
     - [simplejson](https://pypi.org/project/simplejson/)
 
 
-* #### Run BaaS-Core (Backend)
+* ### Run BaaS-Core (Backend)
 BaaS-Core a web service wrapper of [JBF](https://github.com/Mondego/SourcererJBF) that executed JBF on a single project.
 The service is implemented in Python [Flask](https://pypi.org/project/Flask/)  application that triggers JBF execution on user given build request.
 Since it is built on top of JBF, to run it first edit ``jbf.config``. Please read the details here, how to update the [jbf.config](https://github.com/Mondego/SourcererJBF/blob/master/README.md).
@@ -43,11 +43,11 @@ BaaS-Core fully relied on JBF generated FQN index and Jar collection and these t
 Therefore, you need a ***pre-constructed FQN index*** that maps a Jar collection on the host machine. Now to run the service, execute the following commands and the BaaS-Core will be available on [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
 ```bash
-cd BaaS-Core/jbf
+cd BaaS-Core
 python3 jbf.web.py
 ```
 
-* #### Run BaaS-UI (Frontend)
+* ### Run BaaS-UI (Frontend)
 BaaS saves project information in Firebase database. Therefore, before running BaaS-UI, 
 first create a ``service.json`` to save firebase credential in the root directory of BaaS-UI.
 Also to consume request from ``BaaS-Core`` set the base ``backendBaseUrl`` (http://127.0.0.1:5000/) in the  Angular environment 
