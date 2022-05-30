@@ -1,4 +1,4 @@
-# BaaS (Build as a Service)
+# Build as a Service: BaaS
 BaaS is a service that helps users to instantly build an arbitrary Java projects hosted on GitHub.
 It is designed in two distinct modules, BaaS-UI and BaaS-Core.
 
@@ -43,7 +43,7 @@ BaaS-Core fully relied on JBF generated FQN index and Jar collection and these t
 Therefore, you need a ***pre-constructed FQN index*** that maps a Jar collection on the host machine. Now to run the service, execute the following commands and the BaaS-Core will be available on [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
 ```bash
-cd BaaS-Core
+cd BaaS-C
 python3 jbf.web.py
 ```
 
@@ -62,7 +62,7 @@ ng serve
 
 
 ### Note
-
-Currently, ***we are hosting BaaS on request***. 
+Currently, ***we are hosting BaaS on request***. We have a large collection of Jars and the pre-constructed FQN index.
+We successfully compiled ***91,076 Java projects*** with our Jar collection. 
 If you need to try BaaS in your work, please contact us to this email [mdrh@uic.edu](mdrh@uci.edu).
-We will host BaaS for your and allow you to access it.
+We will host BaaS for you and allow you to utilize it for instantly build GitHub Java projects.
