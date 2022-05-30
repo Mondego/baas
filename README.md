@@ -12,6 +12,7 @@ It receives a build request from BaaS-UI and downloads the latest
 version of the user given repository’s branch. Then it attempts to build that repository.
 After building the project, it makes a package of build artifacts and sends
 a downloadable link of that package to the BaaS-UI as a response to the build request.
+The service is implemented in Python [Flask](https://pypi.org/project/Flask/)  application that triggers JBF execution on user given build request.
 
 ## BaaS-UI
 BaaS-UI is a front-end web application that provides a web interface to the
@@ -37,7 +38,6 @@ It is implemented in [Angular](https://angular.io)
 
 * ### Run BaaS-Core (Backend)
 BaaS-Core a web service wrapper of [JBF](https://github.com/Mondego/SourcererJBF) that executed JBF on a single project.
-The service is implemented in Python [Flask](https://pypi.org/project/Flask/)  application that triggers JBF execution on user given build request.
 Since it is built on top of JBF, to run it first edit ``jbf.config``. Please read the details here, how to update the [jbf.config](https://github.com/Mondego/SourcererJBF/blob/master/README.md).
 BaaS-Core fully relied on JBF generated FQN index and Jar collection and these two are host machine dependent.
 Therefore, you need a ***pre-constructed FQN index*** that maps a Jar collection on the host machine. Now to run the service, execute the following commands and the BaaS-Core will be available on [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
