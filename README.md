@@ -73,7 +73,7 @@ ng serve
 ### Note
 We are hosting a ***lightweight*** version of BaaS on [http://styx.ics.uci.edu:5001/](http://styx.ics.uci.edu:5001/). We have a large collection of Jars and the pre-constructed FQN index. With our Jar collection and index, we successfully compiled [91,076 Java projects](https://jbf-with-jgigantic.web.app/jgigantic.html) 
 ***This version will work on a single request and will not accept concurrent build requests.*** If you need to try BaaS in your work that requires concurrent requests and performing large number of project's build, please contact us to this email [mdrh@uci.edu](mailto:mdrh@uci.edu).
-We will host a different versino of BaaS for you and allow you to utilize it for instantly building GitHub Java projects.
+We will host a different version of BaaS for you and allow you to utilize it for instantly building GitHub Java projects.
 
 ### Contact
 If you have any questions or find any issues, please contact at [mdrh@uci.edu](mailto:mdrh@uci.edu)
