@@ -21,7 +21,7 @@ input and displays the build-project overview, statistics, build status, and the
 package link. Users download the build package with this link. BaaS-UI also provides a dashboard showing the current status of the service and the available compiled projects.
 
 
-### BaaS Works in Action [http://styx.ics.uci.edu:5001/](http://styx.ics.uci.edu:5001/) (A Lightweight Version)
+## BaaS Works in Action [http://styx.ics.uci.edu:5001/](http://styx.ics.uci.edu:5001/) (A Lightweight Version)
 https://user-images.githubusercontent.com/6449333/170947458-9c938f46-6e5f-4a50-b7c6-f62640f792a2.mp4
 
 
@@ -33,7 +33,7 @@ https://user-images.githubusercontent.com/6449333/170947458-9c938f46-6e5f-4a50-b
 
 
 
-### Environment Setup & Requirements
+## Environment Setup & Requirements
 
 - [Node.js](https://nodejs.org/en/): version 16+
 - [NPM](https://docs.npmjs.com/about-npm): version 8+
@@ -70,12 +70,12 @@ ng serve
 ```
 
 
-### Note
+## Note
 We are hosting a ***lightweight*** version of BaaS on [http://styx.ics.uci.edu:5001/](http://styx.ics.uci.edu:5001/). We have a large collection of Jars and the pre-constructed FQN index. With our Jar collection and index, we successfully compiled [91,076 Java projects](https://jbf-with-jgigantic.web.app/jgigantic.html) 
 ***This version will work on a single request and will not accept concurrent build requests.*** If you need to try BaaS in your work that requires concurrent requests and performing large number of project's build, please contact us to this email [mdrh@uci.edu](mailto:mdrh@uci.edu).
 We will host a different version of BaaS for you and allow you to utilize it for instantly building GitHub Java projects.
 
-### Contact
+## Contact
 If you have any questions or find any issues, please contact at [mdrh@uci.edu](mailto:mdrh@uci.edu)
 
 ## License
